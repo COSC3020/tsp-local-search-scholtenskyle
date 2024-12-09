@@ -5,11 +5,11 @@ function tsp_ls(distance_matrix) {
         return 0; 
     }
     let current = Array.from({ length: len }, (_, i) => i);
-    for (let i = currentRoute.length - 1; i > 0; i--) {
+    for (let i = current.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1)); 
-        let tmp = currentRoute[i];
-        currentRoute[i] = currentRoute[j];
-        currentRoute[j] = tmp;
+        let tmp = current[i];
+        current[i] = current[j];
+        current[j] = tmp;
     }
 
     function calcLen(route) {
