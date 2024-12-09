@@ -1,7 +1,7 @@
 function tsp_ls(distance_matrix) {
-    const length = distance_matrix.length;
+    const len = distance_matrix.length;
 
-    if ((length == 0) || (length == 1)) {
+    if ((len == 0) || (len == 1)) {
         return 0; 
     }
     let current = Array.from({ length: len }, (_, i) => i);
