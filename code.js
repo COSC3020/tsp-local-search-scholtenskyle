@@ -31,11 +31,11 @@ function tsp_ls(distance_matrix) {
     }
 
     function copy(route) {
-        let new = [];
+        let newWay = [];
         for (let i = 0; i < route.length; i++) {
-            new.push(route[i]);
+            newWay.push(route[i]);
         }
-        return new;
+        return newWay;
     }
     const maxIt = len * len;
     let min = calcLen(current);
