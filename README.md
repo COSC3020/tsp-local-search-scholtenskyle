@@ -50,3 +50,17 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+The time complexity for this would be $$O((n + n + n + n) * n)$$, which simplifies to $$O(n^2)$$. This is because there are loops within every single function, but then each of these functions are called within another loop. You could see it as $$O(4n * n)$$, but of course we can just ignore the 4. The memory complexity would be O(n) just because it uses simple temporary arrays, and that's about it.
+
+https://leeds-faculty.colorado.edu/glover/Publications/TSP.pdf
+
+https://www.geeksforgeeks.org/local-search-algorithm-in-artificial-intelligence/
+
+https://en.wikipedia.org/wiki/Local_search_(optimization)#:~:text=A%20local%20search%20algorithm%20starts,defined%20on%20the%20search%20space.
+
+I used the sources above to gain a better understanding of the problem.
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
+
+
