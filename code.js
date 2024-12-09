@@ -44,14 +44,14 @@ function tsp_ls(distance_matrix) {
         let i = Math.floor(Math.random() * (len - 1));
         let k = Math.floor(Math.random() * (len - i - 1)) + i + 1;
         const currentLength = calcLen(current);
-        swap(currentRoute, i, k);
+        swap(current, i, k);
         const newLength = calcLen(current);
         if (newLength >= currentLength) {
             swap(current, i, k);
         }
         if (newLength < min) {
             min = newLength;
-            bestRoute = copy(currentRoute);
+            bestRoute = copy(current);
         }
     }
 
