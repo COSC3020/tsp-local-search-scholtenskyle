@@ -51,7 +51,9 @@ What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
-The time complexity for this would be $$O((n + n + n + n) * n)$$, which simplifies to $$O(n^2)$$. This is because there are loops within every single function, but then each of these functions are called within another loop. You could see it as $$O(4n * n)$$, but of course we can just ignore the 4. The memory complexity would be O(n) just because it uses simple temporary arrays, and that's about it. Within the main loop, it calls other functions to perform calculations, but the main loop itself, makes decisions based on the distance between nodes, and tries to find the most optimal path. This is where is has to loop through to check several versions of paths against others.
+The worst case scenario for the time complexity would be $$O(n^3)$$. The main loop runs at $$O(n^2)$$ becuase of the amount of iterations needed to get through a dataset.Within this loop there are multiple other functions called. Each one is fairly simple, but they do loop, so there would be 1 n per $$n^2$$. This of course would come out to $$O(n*n^2)$$, or $$O(n^3)$$.
+
+In terms of the worst case memory complexity, it is even more simple. It would come out to O(n), just because of the use of these temporary arrays.
 
 https://leeds-faculty.colorado.edu/glover/Publications/TSP.pdf
 
